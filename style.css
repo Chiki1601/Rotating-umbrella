@@ -1,0 +1,198 @@
+/* found the shapes here tough to do, made a hack job with covering squares to make a wonky umbrella, i'm sure there is a better way! */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5cd51;
+}
+
+.shadowwrap {
+  filter: drop-shadow(0px 0px 2px #ab9037);
+}
+
+.shadow {
+  position: absolute;
+  top: 140px;
+  left: 215px;
+  width: 150px;
+  height: 150px;
+  background-color: #ab9037;
+  -webkit-clip-path: polygon(61% 7%, 81% 19%, 93% 38%, 93% 61%, 81% 81%, 61% 92%, 39% 92%, 19% 81%, 7% 61%, 8% 38%, 19% 19%, 38% 7%);
+          clip-path: polygon(61% 7%, 81% 19%, 93% 38%, 93% 61%, 81% 81%, 61% 92%, 39% 92%, 19% 81%, 7% 61%, 8% 38%, 19% 19%, 38% 7%);
+  -webkit-animation: rotateshadow 4s infinite linear;
+          animation: rotateshadow 4s infinite linear;
+}
+
+.poles {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  top: 210px;
+  left: 210px;
+  transform: rotate(70deg);
+  background-color: #ab9037;
+}
+
+.pole {
+  position: absolute;
+  width: 5px;
+  height: 100px;
+  top: 146px;
+  left: 170px;
+  transform: rotate(-20deg);
+  background-color: #968e80;
+}
+
+.umbrella {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: 40px;
+  left: 60px;
+  z-index: 2;
+  -webkit-animation: rotateumbrella 7s infinite linear;
+          animation: rotateumbrella 7s infinite linear;
+}
+
+.square {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  background: #f5cd51;
+  transform: rotate(60deg);
+  left: 30px;
+  top: 54px;
+  z-index: 2;
+}
+
+#s2 {
+  width: 100px;
+  height: 150px;
+  top: 20px;
+  left: 185px;
+  transform: rotate(-86deg);
+  background: #f5cd51;
+}
+
+#s3 {
+  width: 100px;
+  height: 100px;
+  top: 35px;
+  left: 69px;
+  transform: rotate(-85deg);
+  background: #f5cd51;
+}
+
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  height: 120px;
+  width: 65px;
+  background: #d80506;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform-origin: top;
+  transform: rotate(0deg);
+}
+
+#t2 {
+  transform: rotate(30deg);
+  background: white;
+}
+
+#t3 {
+  transform: rotate(60deg);
+  background: #d80506;
+}
+
+#t4 {
+  transform: rotate(90deg);
+  background: white;
+}
+
+#t5 {
+  transform: rotate(120deg);
+  background: #d80506;
+}
+
+#t6 {
+  transform: rotate(150deg);
+  background: white;
+}
+
+#t7 {
+  transform: rotate(180deg);
+  background: #d80506;
+}
+
+#t8 {
+  transform: rotate(210deg);
+  background: white;
+}
+
+#t9 {
+  transform: rotate(240deg);
+  background: #d80506;
+}
+
+#t10 {
+  transform: rotate(270deg);
+  background: white;
+}
+
+#t11 {
+  transform: rotate(300deg);
+  background: #d80506;
+}
+
+#t12 {
+  transform: rotate(330deg);
+  background: white;
+}
+
+@-webkit-keyframes rotateshadow {
+  0% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-45deg) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-45deg) rotate(360deg);
+  }
+}
+
+@keyframes rotateshadow {
+  0% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-45deg) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-45deg) rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateumbrella {
+  0% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-210deg) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-210deg) rotate(360deg);
+  }
+}
+@keyframes rotateumbrella {
+  0% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-210deg) rotate(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateY(-10deg) rotateZ(-210deg) rotate(360deg);
+  }
+}
